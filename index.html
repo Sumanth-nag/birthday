@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Wish 🎉</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+.box {
+    background: rgba(0,0,0,0.25);
+    padding: 30px;
+    border-radius: 20px;
+}
+h1 {
+    font-size: 30px;
+}
+</style>
+</head>
+
+<body>
+<div class="box">
+    <h1 id="wish">🎉 Happy Birthday Dear 🎂</h1>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const name = params.get("name");
+
+if (name) {
+    document.getElementById("wish").innerText =
+        "🎉 Happy Birthday Dear " + name + " 🎂";
+}
+</script>
+
+</body>
+</html>
